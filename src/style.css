@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root, .app {
+    height: 100%;
+    overflow: hidden;
+
+} 
+
+.app {
+    background: #000;
+    display: flex;
+    padding: 40px;
+}
+.app > div {
+    flex: 1;
+}
+
+.logo {
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    top: 30%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left .counter {
+    display: flex;
+    align-items: center;
+}
+
+.left .counter span {
+    color: #fff;
+    font-size: 120px;
+    margin-right: 20px;
+}
+
+.counter .btns {
+    display: flex;
+    flex-direction: column;
+
+}
+.counter .btns button {
+    height: 30px;
+    width: 40px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.btns button div {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+}
+.btns button:first-child {
+    margin-bottom: 20px;
+
+}
+.btns button:first-child div {
+    transform: translate(0px, 24px) rotate(45deg);
+}
+.btns button:last-child div {
+    transform: translate(0px, -29px) rotate(45deg);
+}
+
+.bottom-wrpr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottom-wrpr p {
+    color: #434343;
+    font-size: 16px;
+    line-height: 20px;
+}
+.bottom-wrpr p a {
+    color: #434343;
+}
+.bottom-wrpr button {
+    margin-top: 45px;
+    background-color: #fff;
+    color: #000;
+    font-size: 26px;
+    padding: 8px 25px;
+    border: 0;
+    cursor: pointer;
+    width: 250px;
+}
+.bottom-wrpr button:disabled {
+    background: #ccc;
+    cursor: default;
+}
+
+.right {
+    flex: 1;
+    color: #fff;
+    font-size: 22px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: none;
+    user-select: none;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.right > p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        width: 500px;
+        margin-left: -250px;
+    }
+}
+
+
+#rato1 {
+    position: absolute;
+    top: 100px;
+    left: -50%;
+}
+.rato-ativo {
+    animation: anim1 3s;
+}
+
+@keyframes anim1 {
+    0%   {left: -20%}
+    50%  {left: 50%; transform: rotate(360deg);}
+    100%  {left: -100%; }
+  }
