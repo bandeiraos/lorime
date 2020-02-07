@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/wlq1xrh.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,9 @@ html, body, #root, .app {
     background: #000;
     display: flex;
     padding: 40px;
+}
+.app, button, input {
+    font-family: neue-haas-unica,sans-serif;
 }
 .app > div {
     flex: 1;
@@ -51,6 +56,7 @@ html, body, #root, .app {
 .counter .btns {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 
 }
 .counter .btns button {
@@ -121,7 +127,7 @@ html, body, #root, .app {
     border: none;
     user-select: none;
     outline: none;
-    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 .right > p:not(:last-child) {
